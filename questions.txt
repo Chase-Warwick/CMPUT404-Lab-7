@@ -1,0 +1,54 @@
+Question 0: What is the URL of your python flask_restfull code on github???
+    https://github.com/Chase-Warwick/CMPUT404-Lab-7
+
+Question 1: How are Flask and Django different? What does Django provide for you that Flask does not?
+    From a cursory glance flask seems to be more light weight and more do it yourself than Django.
+    Django offers a restful api module but they also offer front end modules to display the data,
+    handle data with their own database interface, create the schema for the database from 
+    their model module. It seems like Django does quite a bit more so I might just be touching
+    the surface here.
+
+Question 2: What does REST stand for? When I say something is RESTful, what does that mean?
+    REST stands for representational state transfer. Which is a standard which allows for communication
+    between systems. If something is RESTful it means that it follows the REST standard which implies
+    that the RESTful thing is stateless, and seperates the concerns of client and server. This allows for
+    abstraction of server side and client side logic which makes the system as a whole more modular.
+
+Question 3: What does CRUD stand for? For each letter in CRUD, give the associated HTTP method.
+    CRUD stands for create, read, update and delete.
+    Create is associated with PUT
+    read is associated with GET
+    update is associated with POST
+    delete is associated with DELETE
+
+Question 4: What do HTTP 1XX Status Codes mean? HTTP 2xx? HTTP 3xx? HTTP 4xx? HTTP 5xx?
+    HTTP 1XX is for an informational response such as switching protocols
+    HTTP 2XX is for success
+    HTTP 3XX is for redirection
+    HTTP 4XX is for client/user based errors
+    HTTP 5XX is for server based errors
+
+Question 5: What is an XSS attack? Provide one way a site can be vulneratble to an XSS attack.
+    An XSS attack is a cross site scripting attack which means that a vunerability
+    which allowed for injection of client side scripts. If a site does not sanitize user input before
+    using it that would be a vunerability which could be exploited for an XSS attack.
+
+Question 6: What does CORS stand for? What situation in web application development will you need to implement CORS protection?
+    CORS stands for cross origin resource sharing. CORS protections should be implemented when you are
+
+    not using simple requests such as:
+        GET, 
+        POST,
+        HEAD 
+    The user can set headers manually which are not:
+        Accept, 
+        Accept-Language, 
+        Content-Language,
+        Content-Type 
+    The web application allows for content-type to be set as something other than:
+        application/x-www-form-urlencoded
+        multipart/form-data
+        text/plain
+    Or if a readable stream object is used in the request.
+
+    Essentially any requests which have implications for user data should be preflighted using CORS.
